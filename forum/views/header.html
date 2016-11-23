@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{$title}}</title>
+        <link rel="stylesheet" href="@@static/style.css@@" />
+         <nav>
+  			<a href="@@index@@">Home</a> |
+  			<a href="@@forum/register/@@">Register</a> |
+  			[[ if (isLoggedIn()) : ]]
+			<a href='@@logout@@'>Log out</a>
+			[[ else : ]]
+			<a href='@@login@@'>Log in</a>
+			[[ endif; ]]
+  		 </nav> 
+    </head>
+    <body>
+        <div class="content">
+        [[ include_once 'include/util.inc'; ]]
+
